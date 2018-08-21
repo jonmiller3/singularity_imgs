@@ -61,7 +61,7 @@ From: nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
     python -m pip install 'ipython<6.0'
     python -m pip install jupyter notebook
     python -m pip install tensorflow-gpu
-    python -m pip install boost --with-python
+    python -m pip install boost
 
     # larcv
     export LARCV_BASEDIR=/app/larcv2
