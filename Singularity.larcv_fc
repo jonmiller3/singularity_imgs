@@ -40,7 +40,7 @@ From: nvidia/cuda:8.0-cudnn6-devel-ubuntu16.04
 %post
     # apt-get
     apt-get -y update
-    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python-dev python-pip git wget emacs vim cmake nano
+    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python-dev python-pip git wget emacs vim cmake nano sqlite3
   
      
 
