@@ -70,6 +70,11 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     git clone https://github.com/pumpikano/tf-dann.git
     
 
+    mkdir /scratch 
+    mkdir /data 
+    mkdir /project 
+    mkdir /lfstev
+
 
     # larcv
     export LARCV_BASEDIR=/app/larcv2
@@ -102,4 +107,3 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     mkdir -p $LARCV_BINDIR
     cd $LARCV_BASEDIR && make -j4
 
-    mkdir /scratch /data /project /lfstev
