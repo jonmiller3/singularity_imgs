@@ -54,6 +54,8 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
+    git clone https://github.com/maxhgerlach/tensorflow-1.8.0-ubuntu16.04-py27-no_avx-xeon_x5650.git
+
     # pip
     python -m pip install --upgrade setuptools pip
     python -m pip install --upgrade numpy
