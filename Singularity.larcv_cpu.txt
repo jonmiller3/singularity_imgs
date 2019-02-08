@@ -63,7 +63,7 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
     python -m pip install matplotlib pandas
     python -m pip install 'ipython<6.0'
     python -m pip install jupyter notebook
-    python -m pip install tensorflow-1.8.0-cp27-cp27mu-linux_x86_64.whl
+    python -m pip install tensorflow-1.8.0-ubuntu16.04-py27-no_avx-xeon_x5650/tensorflow-1.8.0-cp27-cp27mu-linux_x86_64.whl
     python -m pip install boost
     python -m pip install scikit-learn scikit-image
 
