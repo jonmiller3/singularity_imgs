@@ -9,7 +9,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     apt-get -y update
 
     echo "Install python3"
-    apt-get -y install python3-matplotlib python3-pip git  
+    apt-get -y install python3-matplotlib python3-pip git cmake wget emacs vim nano sqlite3 
    
     ln -s /usr/bin/python3 /usr/bin/python
     
@@ -58,7 +58,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 %post
     # apt-get
     # apt-get -y update
-    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev wget emacs vim cmake nano sqlite3 curl 
+    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev curl 
     # python3 python3-dev 
     # which python3  
 
