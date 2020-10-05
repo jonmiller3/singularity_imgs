@@ -6,6 +6,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 #------------
 %environment
     # for system
+    which python
     export XDG_RUNTIME_DIR=/tmp/$USER
     # for ROOT
     export ROOTSYS=/usr/local/root
@@ -13,6 +14,8 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     export LD_LIBRARY_PATH=${ROOTSYS}/lib:${LD_LIBRARY_PATH}
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
     # for larcv
+    export LARCV_PYTHON=/usr/local/python
+    which python
     export LARCV_BASEDIR=/app/larcv2
     export LARCV_BUILDDIR=${LARCV_BASEDIR}/build
     export LARCV_COREDIR=${LARCV_BASEDIR}/larcv/core
@@ -27,9 +30,9 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 
     # with numpy
     export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7"
-    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib"
-    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
+    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.5 -I/usr/include/x86_64-linux-gnu/python3.5"
+    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.5/config-x86_64-linux-gnu -L/usr/lib"
+    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lute -lm -lpython3.5 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
     export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
 
     # set bin and lib path
@@ -92,9 +95,9 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     #export LARCV_LIBS="-L${LARCV_LIBDIR} -llarcv"
     # with numpy
     export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7"
-    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib"
-    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython2.7 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
+    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.5 -I/usr/include/x86_64-linux-gnu/python3.5"
+    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.5/config-x86_64-linux-gnu -L/usr/lib"
+    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.5 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
     export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
     # set bin and lib path
     export PATH=${LARCV_BASEDIR}/bin:${LARCV_BINDIR}:${PATH}
