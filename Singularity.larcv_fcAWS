@@ -5,20 +5,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 # Global installation
 #------------
 
-    echo "Update apt-get"
-    apt-get -y update
-
-    echo "Install python3"
-    apt-get -y install python3-matplotlib python3-pip git cmake wget emacs vim nano sqlite3 
-   
-    ln -s /usr/bin/python3 /usr/bin/python
-    
-    echo "Install python packages"
-    python3 -m pip install --upgrade pip numpy setup tools
-    #python3 -m pip install dash==0.41.0 plotly==3.7.1 ipywidgets==7.0.0 CoolProp
-
-
-
+ 
 %environment
     # for system
     which python
@@ -56,6 +43,22 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     export PYTHONPATH=${LARCV_BASEDIR}/python:${PYTHONPATH}
 
 %post
+
+   echo "Update apt-get"
+    apt-get -y update
+
+    echo "Install python3"
+    apt-get -y install python3-matplotlib python3-pip git cmake wget emacs vim nano sqlite3 
+   
+    ln -s /usr/bin/python3 /usr/bin/python
+    
+    echo "Install python packages"
+    python3 -m pip install --upgrade pip numpy setup tools
+    #python3 -m pip install dash==0.41.0 plotly==3.7.1 ipywidgets==7.0.0 CoolProp
+
+
+
+
     # apt-get
     # apt-get -y update
     apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev curl 
