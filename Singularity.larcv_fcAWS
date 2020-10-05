@@ -43,8 +43,10 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 %post
     # apt-get
     apt-get -y update
-    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python-dev python-pip git wget emacs vim cmake nano sqlite3 curl
-  
+    apt-get -y install dpkg-dev g++ gcc binutils libqt4-dev python-dev python-pip git wget emacs vim cmake nano sqlite3 curl 
+    # python3 python3-dev 
+    which python3  
+
      
 
     # ROOT    
@@ -58,15 +60,15 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     export PYTHONPATH=${ROOTSYS}/lib:${PYTHONPATH}
 
     # pip
-    python -m pip install --upgrade setuptools pip
-    python -m pip install --upgrade numpy
-    python -m pip install scipy nose
-    python -m pip install matplotlib pandas
-    python -m pip install 'ipython<6.0'
-    python -m pip install jupyter notebook
-    python -m pip install tensorflow-gpu
-    python -m pip install boost
-    python -m pip install scikit-learn scikit-image
+    python3 -m pip install --upgrade setuptools pip
+    python3 -m pip install --upgrade numpy
+    python3 -m pip install scipy nose
+    python3 -m pip install matplotlib pandas
+    python3 -m pip install 'ipython<6.0'
+    python3 -m pip install jupyter notebook
+    python3 -m pip install tensorflow-gpu
+    python3 -m pip install boost
+    python3 -m pip install scikit-learn scikit-image
 
 
     # update TF with DANN
