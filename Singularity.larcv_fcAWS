@@ -32,8 +32,8 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
 
     # with numpy
     export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.5 -I/usr/include/x86_64-linux-gnu/python3.5"
-    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.5/config-x86_64-linux-gnu -L/usr/lib"
+    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6 -I/usr/include/x86_64-linux-gnu/python3.6"
+    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.6/config-x86_64-linux-gnu -L/usr/lib"
     export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lute -lm -lpython3.5 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
     export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
 
@@ -91,6 +91,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     python3 -m pip install boost
     python3 -m pip install scikit-learn scikit-image
 
+    pip3 install --upgrade --user ipython
 
     # update TF with DANN
     git clone https://github.com/pumpikano/tf-dann.git
@@ -119,9 +120,9 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     #export LARCV_LIBS="-L${LARCV_LIBDIR} -llarcv"
     # with numpy
     export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.5 -I/usr/include/x86_64-linux-gnu/python3.5"
-    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.5/config-x86_64-linux-gnu -L/usr/lib"
-    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.5 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
+    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6 -I/usr/include/x86_64-linux-gnu/python3.6"
+    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.6/config-x86_64-linux-gnu -L/usr/lib"
+    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.6 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
     export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
     # set bin and lib path
     export PATH=${LARCV_BASEDIR}/bin:${LARCV_BINDIR}:${PATH}
