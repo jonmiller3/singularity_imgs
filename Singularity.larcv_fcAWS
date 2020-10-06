@@ -71,9 +71,9 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
      
 
     # ROOT    
-    wget https://root.cern.ch/download/root_v6.08.06.Linux-ubuntu16-x86_64-gcc5.4.tar.gz
-    tar -xzf root_v6.08.06.Linux-ubuntu16-x86_64-gcc5.4.tar.gz
-    rm root_v6.08.06.Linux-ubuntu16-x86_64-gcc5.4.tar.gz
+    wget https://root.cern.ch/download/root_v6.18.00.Linux-ubuntu18-x86_64-gcc7.4.tar.gz
+    tar -xzf root_v6.18.00.Linux-ubuntu18-x86_64-gcc7.4.tar.gz    
+    rm root_v6.18.00.Linux-ubuntu18-x86_64-gcc7.4.tar.gz
     mv root /usr/local/root
     export ROOTSYS=/usr/local/root
     export PATH=${ROOTSYS}/bin:${PATH}
