@@ -59,6 +59,8 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     python3 -m pip install --upgrade setuptools
     #python3 -m pip install dash==0.41.0 plotly==3.7.1 ipywidgets==7.0.0 CoolProp
     ls /usr/include/python3.6 
+    echo " found first "
+    ls /usr/include
     ls /usr/include/x86_64-linux-gnu/python3.6
     echo "did we find python?"
     ls
