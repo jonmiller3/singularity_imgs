@@ -64,6 +64,8 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     ls /usr/include
     echo " found second "
     ls /usr/include/x86_64-linux-gnu
+    echo " found second "
+    ls /usr/include/x86_64-linux-gnu/python3.6m
     echo "did we find python?"
     ls
     ls /usr/include/python3.6
@@ -129,7 +131,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     #export LARCV_LIBS="-L${LARCV_LIBDIR} -llarcv"
     # with numpy
     export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6 -I/usr/include/x86_64-linux-gnu/python3.6"
+    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6 -I/usr/include/x86_64-linux-gnu/python3.6m"
     export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.6/config-x86_64-linux-gnu -L/usr/lib"
     export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.6 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
     export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
