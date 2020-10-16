@@ -105,7 +105,7 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     python3 -m pip install tensorflow-gpu
     python3 -m pip install boost
     python3 -m pip install scikit-learn scikit-image
-    python3 -m pip install skbuild
+    python3 -m pip install scikit-build
 
     python3 -m pip install --upgrade --user ipython
 
