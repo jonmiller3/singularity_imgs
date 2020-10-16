@@ -119,36 +119,38 @@ From: nvidia/cuda:11.1-cudnn8-devel-ubuntu18.04
     mkdir /project 
     mkdir /lfstev
 
+    python3 -m pip install larcv
+
 
     # larcv
-    export LARCV_BASEDIR=/app/larcv2
-    export LARCV_BUILDDIR=${LARCV_BASEDIR}/build
-    export LARCV_COREDIR=${LARCV_BASEDIR}/larcv/core
-    export LARCV_APPDIR=${LARCV_BASEDIR}/larcv/app
-    export LARCV_LIBDIR=${LARCV_BUILDDIR}/lib
-    export LARCV_INCDIR=${LARCV_BUILDDIR}/include
-    export LARCV_BINDIR=${LARCV_BUILDDIR}/bin
-    export LARCV_ROOT6=1
-    export LARCV_PYTHON=/usr/bin/python3
-    export LARCV_CXX=g++
+    #export LARCV_BASEDIR=/app/larcv2
+    #export LARCV_BUILDDIR=${LARCV_BASEDIR}/build
+    #export LARCV_COREDIR=${LARCV_BASEDIR}/larcv/core
+    #export LARCV_APPDIR=${LARCV_BASEDIR}/larcv/app
+    #export LARCV_LIBDIR=${LARCV_BUILDDIR}/lib
+    #export LARCV_INCDIR=${LARCV_BUILDDIR}/include
+    #export LARCV_BINDIR=${LARCV_BUILDDIR}/bin
+    #export LARCV_ROOT6=1
+    #export LARCV_PYTHON=/usr/bin/python3
+    #export LARCV_CXX=g++
     # without numpy
     #ENV LARCV_NUMPY=0
     #export LARCV_INCLUDES="-I${LARCV_INCDIR} "
     #export LARCV_LIBS="-L${LARCV_LIBDIR} -llarcv"
     # with numpy
-    export LARCV_NUMPY=1
-    export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6m -I/usr/include/x86_64-linux-gnu/python3.6m"
-    export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib"
-    export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.6 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
-    export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
+    #export LARCV_NUMPY=1
+    #export LARCV_INCLUDES="-I${LARCV_INCDIR} -I/usr/include/python3.6m -I/usr/include/x86_64-linux-gnu/python3.6m"
+    #export LARCV_LIBS="-L/usr/lib/ -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib"
+    #export LARCV_LIBS="${LARCV_LIBS} -lpthread -ldl -lutil -lm -lpython3.6 -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions"
+    #export LARCV_LIBS="${LARCV_LIBS} -L${LARCV_LIBDIR} -llarcv"
     # set bin and lib path
-    export PATH=${LARCV_BASEDIR}/bin:${LARCV_BINDIR}:${PATH}
-    export LD_LIBRARY_PATH=${LARCV_LIBDIR}:${LD_LIBRARY_PATH}:
-    export PYTHONPATH=${LARCV_BASEDIR}/python:${PYTHONPATH}
-    mkdir /app && cd /app
-    git clone https://github.com/DeepLearnPhysics/larcv2
-    mkdir -p $LARCV_BUILDDIR
-    mkdir -p $LARCV_LIBDIR
-    mkdir -p $LARCV_BINDIR
-    cd $LARCV_BASEDIR && make -j4
+    #export PATH=${LARCV_BASEDIR}/bin:${LARCV_BINDIR}:${PATH}
+    #export LD_LIBRARY_PATH=${LARCV_LIBDIR}:${LD_LIBRARY_PATH}:
+    #export PYTHONPATH=${LARCV_BASEDIR}/python:${PYTHONPATH}
+    #mkdir /app && cd /app
+    #git clone https://github.com/DeepLearnPhysics/larcv2
+    #mkdir -p $LARCV_BUILDDIR
+    #mkdir -p $LARCV_LIBDIR
+    #mkdir -p $LARCV_BINDIR
+    #cd $LARCV_BASEDIR && make -j4
 
